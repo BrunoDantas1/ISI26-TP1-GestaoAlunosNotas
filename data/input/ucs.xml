@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ucs>
+  <uc>
+    <codigo>UC01</codigo>
+    <nome>Programação Orientada a Objetos</nome>
+    <ects>6</ects>
+    <ano>1</ano>
+  </uc>
+  <uc>
+    <codigo>UC02</codigo>
+    <nome>Bases de Dados</nome>
+    <ects>6</ects>
+    <ano>2</ano>
+  </uc>
+  <uc>
+    <codigo>UC03</codigo>
+    <nome>Redes de Computadores</nome>
+    <ects>5</ects>
+    <ano>2</ano>
+  </uc>
+  <uc>
+    <codigo>UC04</codigo>
+    <nome>Engenharia de Software</nome>
+    <ects>6</ects>
+    <ano>3</ano>
+  </uc>
+  <uc>
+    <codigo>UC05</codigo>
+    <nome>Integração de Sistemas de Informação</nome>
+    <ects>6</ects>
+    <ano>3</ano>
+  </uc>
+  <uc>
+    <codigo>UC06</codigo>
+    <nome>Matemática Discreta</nome>
+    <ects>5</ects>
+    <ano>1</ano>
+  </uc>
+</ucs>

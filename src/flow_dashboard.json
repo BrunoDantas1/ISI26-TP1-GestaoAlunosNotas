@@ -1,0 +1,525 @@
+[
+    {
+        "id": "4cb946ba2332a2bb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "27d9106b0e87a5ec",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "localhost",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "isi_notas",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "a686a0733169fa3d",
+        "type": "ui_tab",
+        "name": "Resultados",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "039f499d4db7c334",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "06581c79cf5a705f",
+        "type": "ui_group",
+        "name": "Notas",
+        "tab": "a686a0733169fa3d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d4d6b16e688ff765",
+        "type": "ui_group",
+        "name": "Média por UC",
+        "tab": "",
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "69584250328d92f0",
+        "type": "ui_group",
+        "name": "Média por UC",
+        "tab": "a686a0733169fa3d",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2c3c1611964cd49e",
+        "type": "ui_group",
+        "name": "Reprovação por UC",
+        "tab": "a686a0733169fa3d",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4453f8e458293789",
+        "type": "inject",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "390adaadd2bd8a8a"
+            ]
+        ]
+    },
+    {
+        "id": "390adaadd2bd8a8a",
+        "type": "postgresql",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "query": "SELECT estado, COUNT(*)::int AS total FROM notas_completas GROUP BY estado;",
+        "postgreSQLConfig": "27d9106b0e87a5ec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "9c987c3a51024c55"
+            ]
+        ]
+    },
+    {
+        "id": "9c987c3a51024c55",
+        "type": "function",
+        "z": "4cb946ba2332a2bb",
+        "name": "function 1",
+        "func": "return [[{payload: []}].concat(\n  msg.payload.map(r => ({topic: r.estado, payload: r.total}))\n)];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "f1dfc67a7e0c2ef8"
+            ]
+        ]
+    },
+    {
+        "id": "f1dfc67a7e0c2ef8",
+        "type": "ui_chart",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "group": "06581c79cf5a705f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Aprovados vs Reprovados",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20e8dbc611c761d9",
+        "type": "inject",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "69547bb18586cee0"
+            ]
+        ]
+    },
+    {
+        "id": "69547bb18586cee0",
+        "type": "postgresql",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "query": "SELECT uc_nome, ROUND(AVG(nota),2)::float AS media FROM notas_completas GROUP BY uc_nome ORDER BY uc_nome;",
+        "postgreSQLConfig": "27d9106b0e87a5ec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "6138f56e29d64a3d"
+            ]
+        ]
+    },
+    {
+        "id": "6138f56e29d64a3d",
+        "type": "function",
+        "z": "4cb946ba2332a2bb",
+        "name": "function 2",
+        "func": "return [[{payload: []}].concat(\n  msg.payload.map(r => ({topic: r.uc_nome, payload: r.media}))\n)];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "40cd0579db92aeb0"
+            ]
+        ]
+    },
+    {
+        "id": "40cd0579db92aeb0",
+        "type": "ui_chart",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "group": "69584250328d92f0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Média por UC",
+        "chartType": "horizontalBar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 740,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93bd22f9dc1a1141",
+        "type": "inject",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "ec6ff1d20f015ba1"
+            ]
+        ]
+    },
+    {
+        "id": "ec6ff1d20f015ba1",
+        "type": "postgresql",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "query": "SELECT uc_nome, COUNT(*)::int AS total FROM notas_completas WHERE estado='Reprovado' GROUP BY uc_nome ORDER BY uc_nome;",
+        "postgreSQLConfig": "27d9106b0e87a5ec",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "f91c85b746ec87b8"
+            ]
+        ]
+    },
+    {
+        "id": "f91c85b746ec87b8",
+        "type": "function",
+        "z": "4cb946ba2332a2bb",
+        "name": "function 3",
+        "func": "const k = Object.keys(msg.payload[0] || {});\nreturn [[{payload: []}].concat(\n  msg.payload.map(r => ({topic: String(r[k[0]]), payload: Number(r[k[1]])}))\n)];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "66d83b3b0dfef49b"
+            ]
+        ]
+    },
+    {
+        "id": "66d83b3b0dfef49b",
+        "type": "ui_chart",
+        "z": "4cb946ba2332a2bb",
+        "name": "",
+        "group": "2c3c1611964cd49e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Reprovação por UC",
+        "chartType": "horizontalBar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 760,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "544f454417a0d45c",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-postgresql": "0.16.2",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
