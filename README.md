@@ -124,4 +124,4 @@ node-red
 
 ## Vídeo de demonstração
 
-[<inserir ligação do vídeo>](https://drive.google.com/file/d/1FSuroS-DaTBrt3Jyl7owjVdktuPK33Ls/view)
+https://drive.google.com/file/d/1FSuroS-DaTBrt3Jyl7owjVdktuPK33Ls/view
